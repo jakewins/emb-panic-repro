@@ -1,0 +1,9 @@
+# Before upgrading check that everything is available on all tier1 targets here:
+# https://rust-lang.github.io/rustup-components-history
+[toolchain]
+# Needed for, at least, embedded-io, because it uses https://doc.rust-lang.org/nightly/unstable-book/language-features/impl-trait-projections.html
+channel = "nightly-2022-11-22"
+# https://rust-lang.github.io/rustup/concepts/components.html
+components = [ "rust-src", "rustfmt" ]
+# Does this make it so this only applies if this is the target? docs are sparse..
+targets = ["thumbv6m-none-eabi"]
